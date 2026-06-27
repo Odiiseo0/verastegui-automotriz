@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio Automotriz Verastegui</title>
+    <!-- Iconos de FontAwesome para los servicios y redes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAV BAR / MENÚ -->
+    <header>
+        <div class="logo">
+            <span class="v-logo">V</span>
+            <div class="logo-text">
+                <span class="brand-name">VERASTEGUI</span>
+                <span class="sub-brand">SERVICIO AUTOMOTRIZ</span>
+            </div>
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+            <button class="btn-login" onclick="abrirModal('modalLogin')">Iniciar Sesión</button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION CON CARRUSEL -->
+    <section id="inicio" class="hero">
+        <div class="carousel">
+            <!-- Imágenes reales de fondo (puedes cambiarlas por tus fotos locales si deseas) -->
+            <div class="carousel-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?q=80&w=1200');"></div>
+            <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617886322168-72b886573c3c?q=80&w=1200');"></div>
+            <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1507136566006-cfc505b114fc?q=80&w=1200');"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1>EXPERIENCIA QUE SE SIENTE, CALIDAD QUE TE MUEVE</h1>
+            <p>Mecánica Rápida • Diagnóstico • Confianza | Multimarcas</p>
+            <div class="hero-buttons">
+                <button class="btn-cta agenda" onclick="abrirModal('modalCita')">
+                    <i class="fa-solid fa-calendar-days"></i> AGENDAR CITA AHORA
+                </button>
+                <a href="tel:+528142779094" class="btn-cta llamar">
+                    <i class="fa-solid fa-phone"></i> LLAMAR AL TALLER
+                </a>
+                <a href="https://wa.me/528142779094" target="_blank" class="btn-cta whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> WHATSAPP
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section id="servicios" class="services-section">
+        <h2>NUESTROS SERVICIOS</h2>
+        <p class="subtitle">Atención rápida, trabajo garantizado ¡Tu auto en las mejores manos!</p>
+        
+        <div class="services-grid">
+            <div class="service-card" onclick="mostrarDetalle('Amortiguadores')">
+                <i class="fa-solid fa-car-side"></i>
+                <h3>Cambio de Amortiguadores</h3>
+            </div>
+            <div class="service-card" onclick="mostrarDetalle('Aceite')">
+                <i class="fa-solid fa-oil-can"></i>
+                <h3>Cambio de Aceite y Filtros</h3>
+            </div>
+            <div class="service-card" onclick="mostrarDetalle('Frenos')">
+                <i class="fa-solid fa-circle-dot"></i>
+                <h3>Servicio de Frenos</h3>
+            </div>
+            <div class="service-card" onclick="mostrarDetalle('Escaner')">
+                <i class="fa-solid fa-laptop-medical"></i>
+                <h3>Diagnóstico por Escáner</h3>
+            </div>
+            <div class="service-card" onclick="mostrarDetalle('Historial')">
+    <i class="fa-solid fa-shop"></i>
+    <h3>Ven y Conócenos</h3>
+</div>
+            <div class="service-card" onclick="mostrarDetalle('Enfriamiento')">
+                <i class="fa-solid fa-temperature-arrow-down"></i>
+                <h3>Sistema de Enfriamiento</h3>
+            </div>
+            <div class="service-card" onclick="mostrarDetalle('Preventivo')">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>Mantenimiento Preventivo</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO Y UBICACIÓN -->
+    <section id="contacto" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>CONTACTO</h2>
+                <p><i class="fa-solid fa-phone"></i> +52 81 2154 0044</p>
+                <p><i class="fa-solid fa-envelope"></i> odiiseo0@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Santa Catarina, Nuevo León</p>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.1549516941423!2d-100.4080843258283!3d25.666157712548845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bd7d2e8aa603%3A0x6b72195ee04b3c2c!2sC.%20Libertad%20455%2C%20Casco%20Urbano%2C%2066230%20San%20Pedro%20Garza%20Garc%C3%ADa%2C%20N.L.!5e0!3m2!1ses!2smx!4v1781052300460!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DINÁMICO PARA DETALLES DE SERVICIO -->
+    <div id="modalDetalleServicio" class="modal">
+        <div class="modal-content text-center">
+            <span class="close-btn" onclick="cerrarModal('modalDetalleServicio')">×</span>
+            <i id="detalleIcono" class="fa-solid" style="font-size: 3rem; color: #3b82f6; margin-bottom: 15px; display: block; text-align: center;"></i>
+            <h2 id="detalleTitulo">Título del Servicio</h2>
+            
+            <div style="margin: 20px 0; text-align: left; line-height: 1.6;">
+                <p><strong><i class="fa-solid fa-circle-info" style="color:#3b82f6;"></i> ¿Qué se hará?:</strong></p>
+                <p id="detalleDescripcion" style="color: #cbd5e0; margin-bottom: 15px; padding-left: 5px;"></p>
+                
+                <p><strong><i class="fa-solid fa-tag" style="color:#10b981;"></i> Costo Estimado:</strong></p>
+                <p id="detalleCosto" style="font-size: 1.3rem; color: #10b981; font-weight: bold; padding-left: 5px;"></p>
+            </div>
+            
+            <button class="btn-submit" onclick="cerrarModal('modalDetalleServicio'); abrirModal('modalCita');" style="background-color: #ffb703; color: black;">
+                <i class="fa-solid fa-calendar-days"></i> Agendar este Servicio
+            </button>
+        </div>
+    </div>
+
+    <!-- MODAL DE AGENDAR CITA -->
+    <div id="modalCita" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="cerrarModal('modalCita')">×</span>
+            <h2>Agendar tu Cita</h2>
+            <form id="formCita">
+                <label>Nombre Completo:</label>
+                <input type="text" id="nombreCita" required placeholder="Ej. Juan Pérez">
+                
+                <label>Teléfono:</label>
+                <input type="tel" id="telefonoCita" required placeholder="Ej. 81XXXXXXXX">
+                
+                <label>Servicio Requerido:</label>
+                <select id="servicioCita" required>
+                    <option value="">Selecciona un servicio...</option>
+                    <option value="Amortiguadores">Cambio de Amortiguadores</option>
+                    <option value="Aceite">Cambio de Aceite y Filtros</option>
+                    <option value="Frenos">Servicio de Frenos</option>
+                    <option value="Escaner">Diagnóstico por Escáner</option>
+                    <option value="Enfriamiento">Sistema de Enfriamiento</option>
+                    <option value="Preventivo">Mantenimiento Preventivo</option>
+                </select>
+                
+                <label>Fecha de la Cita:</label>
+                <input type="date" required id="fechaCita">
+                
+                <button type="submit" class="btn-submit">Confirmar Programación</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL DE INICIO DE SESIÓN -->
+    <div id="modalLogin" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="cerrarModal('modalLogin')">×</span>
+            <h2>Ingreso Seguro</h2>
+            <form id="formLogin">
+                <label>Correo Electrónico:</label>
+                <input type="email" id="emailLogin" required placeholder="usuario@correo.com">
+                
+                <label>Contraseña:</label>
+                <input type="password" id="passLogin" required placeholder="••••••••">
+                
+                <p class="security-note"><i class="fa-solid fa-shield-halved"></i> Conexión cifrada localmente</p>
+                <button type="submit" class="btn-submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
+<section id="horarios-estatus" style="padding: 60px 20px; background-color: #0f1115; border-top: 1px solid #222; color: #fff;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+        
+        <h2 style="font-size: 2rem; margin-bottom: 10px; letter-spacing: 1px;">NUESTROS HORARIOS</h2>
+        <p style="color: #cbd5e1; margin-bottom: 30px;">Consulta nuestros días de atención antes de visitarnos.</p>
+
+        <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: stretch; margin-bottom: 40px; max-width: 800px; margin: 0 auto 40px auto;"></div>
+            
+            <div style="flex: 1; min-width: 280px; background: #161920; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #2a2e39;">
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #222;">
+                    <span style="color: #cbd5e1; font-weight: bold;">Lunes a Viernes:</span>
+                    <span style="color: #007aff;">8:00 AM - 6:00 PM</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #222;">
+                    <span style="color: #cbd5e1; font-weight: bold;">Sábados:</span>
+                    <span style="color: #007aff;">8:00 AM - 1:00 PM</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                    <span style="color: #cbd5e1; font-weight: bold;">Domingos:</span>
+                    <span style="color: #ff3b30; font-weight: bold;">Cerrado</span>
+                </div>
+            </div>
+    <!-- SECCIÓN: PREGUNTAS FRECUENTES (FAQ) -->
+<section id="faq-section" style="padding: 60px 20px; background-color: #12141c; border-top: 1px solid #222; color: #fff;">
+    <div style="max-width: 700px; margin: 0 auto;">
+        
+        <h2 style="font-size: 2rem; text-align: center; margin-bottom: 10px; letter-spacing: 1px;">PREGUNTAS FRECUENTES</h2>
+        <p style="color: #cbd5e1; text-align: center; margin-bottom: 40px;">Resolvemos tus dudas principales sobre nuestro servicio.</p>
+
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+            
+            <!-- Pregunta 1 -->
+            <div style="background: #161920; border-radius: 8px; border: 1px solid #2a2e39; overflow: hidden;">
+                <button onclick="toggleFaq(this)" style="width: 100%; padding: 18px 20px; background: none; border: none; color: #fff; font-size: 1.1rem; font-weight: bold; text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                    <span>¿Cuentan con garantía en las reparaciones?</span>
+                    <i class="fa-solid fa-chevron-down" style="transition: transform 0.3s; color: #007aff;"></i>
+                </button>
+                <div style="max-height: 0; padding: 0 20px; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease-out; color: #cbd5e1; font-size: 1rem; line-height: 1.6; background: #1a1e27;">
+                    <p style="margin-bottom: 15px; margin-top: 5px;">¡Sí, por supuesto! En Taller Automotriz Verastegui garantizamos todos nuestros trabajos tanto en mano de obra como en las refacciones instaladas. Tu seguridad es nuestro compromiso principal.</p>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div style="background: #161920; border-radius: 8px; border: 1px solid #2a2e39; overflow: hidden;">
+                <button onclick="toggleFaq(this)" style="width: 100%; padding: 18px 20px; background: none; border: none; color: #fff; font-size: 1.1rem; font-weight: bold; text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                    <span>¿Qué formas de pago aceptan?</span>
+                    <i class="fa-solid fa-chevron-down" style="transition: transform 0.3s; color: #007aff;"></i>
+                </button>
+                <div style="max-height: 0; padding: 0 20px; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease-out; color: #cbd5e1; font-size: 1rem; line-height: 1.6; background: #1a1e27;">
+                    <p style="margin-bottom: 15px; margin-top: 5px;">Para tu comodidad, aceptamos pagos en efectivo, transferencias bancarias directas y pagos con tarjetas de débito o crédito.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+            <!-- VINCULACIÓN DEL ARCHIVO JAVASCRIPT EXTERNO -->
+    <script src="script.js"></script>
+</body>
+</html>
